@@ -25,7 +25,14 @@ class AuthController{
             return res.sendStatus(401);
         }
 
-        const token =
+        const token = jwt.sign({ id: user.id}, 'BATMAN', { expiresIn: '1d'});
+
+        delete user.password;
+
+        return res.json({
+            user,
+            token
+        });
 
 
 
