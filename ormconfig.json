@@ -11,7 +11,5 @@
     "migrations": [
         "src/data/migrations/*.ts"
     ],
-    "cli" :{
-        "migrationsDir": "src/data/migrations"
-    }
+    "cli": { "migrationsDir": "src/data/migrations" }
  }
