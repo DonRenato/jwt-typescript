@@ -1,12 +1,13 @@
 import express from 'express';
 import routes from '../src/Routes/routes';
+import cors from 'cors';
 
 import './data/connect';
 import 'reflect-metadata';
 
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 

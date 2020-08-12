@@ -32,6 +32,16 @@ class UserController{
     
     }
 
+    async list(req: Request, res: Response){
+        const repository = getRepository(User);
+
+        const user =  await repository.find();
+
+        return res.json(user);
+    }
+    
+  
+
 }
 
 export default new UserController();
